@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xo_game/core/utils/app_images.dart';
 import 'package:xo_game/core/utils/styles.dart';
+import 'package:xo_game/features/login/presentation/view/widgets/custom_button.dart';
+import 'package:xo_game/features/login/presentation/view/widgets/custom_text_field.dart';
 import 'package:xo_game/main.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -46,64 +48,6 @@ class LoginViewBody extends StatelessWidget {
           color: Colors.amber,
         ),
       ],
-    );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  final String txt;
-  final Color color;
-  const CustomButton({
-    super.key,
-    required this.txt,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 100),
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        ),
-        child: Text(
-          txt,
-          style: Styles.textStyle16Normal.copyWith(
-            color: Colors.black,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CustomTextField extends StatelessWidget {
-  final String txt;
-  final TextEditingController player;
-  const CustomTextField({
-    super.key,
-    required this.txt,
-    required this.player,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: TextField(
-        controller: player,
-        decoration: InputDecoration(
-          hintText: txt,
-          fillColor: Colors.grey,
-          filled: true,
-          focusedBorder: const OutlineInputBorder(),
-          enabledBorder: const OutlineInputBorder(),
-        ),
-      ),
     );
   }
 }
