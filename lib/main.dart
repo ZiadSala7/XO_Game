@@ -6,16 +6,31 @@ void main() {
   runApp(const MyApp());
 }
 
+TextEditingController player1 = TextEditingController();
+TextEditingController player2 = TextEditingController();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
       theme: ThemeData(
         scaffoldBackgroundColor: scaffoldColor,
+        textTheme: TextTheme(
+          bodySmall: textStyleMethod(),
+          bodyLarge: textStyleMethod(),
+          bodyMedium: textStyleMethod(),
+        ),
       ),
+    );
+  }
+
+  TextStyle textStyleMethod() {
+    return const TextStyle(
+      color: Colors.white,
     );
   }
 }
