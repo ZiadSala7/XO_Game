@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    timer = Timer(const Duration(seconds: 8), () {
+    timer = Timer(const Duration(seconds: 6), () {
       GoRouter.of(context).pushReplacement(AppRouter.loginView);
     });
   }

@@ -4,10 +4,12 @@ import 'package:xo_game/core/utils/styles.dart';
 class CustomButton extends StatelessWidget {
   final String txt;
   final Color color;
+  final Function() onPressed;
   const CustomButton({
     super.key,
     required this.txt,
     required this.color,
+    required this.onPressed,
   });
 
   @override
@@ -15,7 +17,7 @@ class CustomButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 100),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
           shape:

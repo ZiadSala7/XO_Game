@@ -43,9 +43,10 @@ class LoginViewBody extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const CustomButton(
+        CustomButton(
           txt: 'Start Game',
           color: Colors.amber,
+          onPressed: () {},
         ),
       ],
     );
