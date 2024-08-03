@@ -14,8 +14,8 @@ class CustomFadeInDown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeInDown(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
+      delay: const Duration(seconds: 2),
+      duration: Duration(seconds: duration),
       child: child,
     );
   }
