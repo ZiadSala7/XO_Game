@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:xo_game/core/utils/app_images.dart';
+import 'package:xo_game/core/utils/app_router.dart';
 import 'package:xo_game/core/utils/styles.dart';
 import 'package:xo_game/features/login/presentation/view/widgets/custom_button.dart';
 import 'package:xo_game/features/login/presentation/view/widgets/custom_text_field.dart';
@@ -46,7 +48,9 @@ class LoginViewBody extends StatelessWidget {
         CustomButton(
           txt: 'Start Game',
           color: Colors.amber,
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouter.homeView);
+          },
         ),
       ],
     );
