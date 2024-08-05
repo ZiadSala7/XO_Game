@@ -8,6 +8,7 @@ void main() {
 
 TextEditingController player1 = TextEditingController();
 TextEditingController player2 = TextEditingController();
+bool xoTurns = false;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

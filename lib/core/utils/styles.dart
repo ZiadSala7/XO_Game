@@ -49,4 +49,8 @@ class Styles {
     fontSize: 25,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle textStyle120Bold = TextStyle(
+    fontSize: 120,
+    fontWeight: FontWeight.bold,
+  );
 }
