@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:xo_game/core/utils/app_images.dart';
 import 'package:xo_game/core/utils/app_router.dart';
-import 'package:xo_game/core/widgets/awesome_dialog_model.dart';
 import 'package:xo_game/features/login/presentation/view/widgets/custom_button.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -34,9 +33,7 @@ class LoginViewBody extends StatelessWidget {
         CustomButton(
           txt: "About us",
           color: Colors.amber,
-          onPressed: () {
-            awesomeDialogModel(context).show();
-          },
+          onPressed: () {},
         ),
       ],
     );

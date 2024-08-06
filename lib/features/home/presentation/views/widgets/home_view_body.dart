@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:xo_game/core/utils/app_router.dart';
-import 'package:xo_game/core/utils/styles.dart';
+import 'package:xo_game/features/home/data/data.dart';
 import 'package:xo_game/features/home/presentation/views/widgets/custom_xo_board.dart';
+import 'package:xo_game/features/home/presentation/views/widgets/player_name.dart';
 import 'package:xo_game/features/login/presentation/view/widgets/custom_button.dart';
-
-List<String> cells = ["", "", "", "", "", "", "", "", ""];
-String player = 'X';
-bool xoTurns = false;
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -25,34 +22,24 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       children: [
         const PlayerName(),
         const SizedBox(
-          height: 90,
+          height: 70,
         ),
         const CustomXOBoard(),
+        const SizedBox(
+          height: 20,
+        ),
         CustomButton(
           txt: "Reset",
           color: Colors.amber,
           onPressed: () {
-            GoRouter.of(context).pushReplacement(AppRouter.homeView);
             xoTurns = false;
+            cnt = 0;
             cells = ["", "", "", "", "", "", "", "", ""];
+            player = 'O';
+            GoRouter.of(context).pushReplacement(AppRouter.homeView);
           },
         ),
       ],
-    );
-  }
-}
-
-class PlayerName extends StatelessWidget {
-  const PlayerName({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      "It's $player turn",
-      style: Styles.textStyle50Bold,
-      textAlign: TextAlign.center,
     );
   }
 }

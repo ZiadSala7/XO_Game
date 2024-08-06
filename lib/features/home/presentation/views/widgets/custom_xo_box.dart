@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:xo_game/core/widgets/awesome_dialog_model.dart';
+import 'package:xo_game/features/home/data/data.dart';
 import 'package:xo_game/features/home/presentation/views/widgets/home_view_body.dart';
+import 'package:xo_game/features/home/presentation/views/widgets/winner_check.dart';
 import 'package:xo_game/features/home/presentation/views/widgets/xo_widget.dart';
 
 class CustomXOBox extends StatefulWidget {
@@ -23,15 +24,12 @@ class _CustomXOBoxState extends State<CustomXOBox> {
           ? null
           : () {
               setState(() {
-                isClicked = true;
+                cnt++;
                 xoTurns = !xoTurns;
+                isClicked = true;
                 player = xoTurns ? 'X' : 'O';
                 cells[widget.index] = xoTurns ? 'O' : 'X';
-                if (cells[0] == cells[1] &&
-                    cells[1] == cells[2] &&
-                    cells[2] == 'X') {
-                  awesomeDialogModel(context).show();
-                }
+                xOrOWin(context);
               });
             },
       child: Container(

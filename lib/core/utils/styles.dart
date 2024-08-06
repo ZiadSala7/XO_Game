@@ -53,8 +53,8 @@ class Styles {
     fontSize: 120,
     fontWeight: FontWeight.bold,
   );
-  static const TextStyle textStyle50Bold = TextStyle(
-    fontSize: 50,
+  static const TextStyle textStyle30Bold = TextStyle(
+    fontSize: 30,
     fontWeight: FontWeight.bold,
   );
 }
