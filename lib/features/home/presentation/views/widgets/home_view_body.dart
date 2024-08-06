@@ -33,6 +33,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           color: Colors.amber,
           onPressed: () {
             xoTurns = false;
+            gameOver = false;
             cnt = 0;
             cells = ["", "", "", "", "", "", "", "", ""];
             player = 'O';

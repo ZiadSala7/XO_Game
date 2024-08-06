@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:xo_game/features/home/data/data.dart';
-import 'package:xo_game/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:xo_game/features/home/presentation/views/widgets/winner_check.dart';
 import 'package:xo_game/features/home/presentation/views/widgets/xo_widget.dart';
 
@@ -20,18 +19,20 @@ class _CustomXOBoxState extends State<CustomXOBox> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: isClicked
+      onTap: gameOver
           ? null
-          : () {
-              setState(() {
-                cnt++;
-                xoTurns = !xoTurns;
-                isClicked = true;
-                player = xoTurns ? 'X' : 'O';
-                cells[widget.index] = xoTurns ? 'O' : 'X';
-                xOrOWin(context);
-              });
-            },
+          : isClicked
+              ? null
+              : () {
+                  setState(() {
+                    cnt++;
+                    xoTurns = !xoTurns;
+                    isClicked = true;
+                    player = xoTurns ? 'X' : 'O';
+                    cells[widget.index] = xoTurns ? 'O' : 'X';
+                    xOrOWin(context);
+                  });
+                },
       child: Container(
         margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(

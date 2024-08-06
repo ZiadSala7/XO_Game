@@ -20,6 +20,7 @@ AwesomeDialog awesomeDialogModel(
     descTextStyle: Styles.textStyle20Bold.copyWith(color: Colors.black),
     btnOkOnPress: () {
       cnt = 0;
+      gameOver = false;
       cells = ["", "", "", "", "", "", "", "", ""];
       GoRouter.of(context).pushReplacement(AppRouter.homeView);
     },

@@ -16,6 +16,7 @@ xOrOWin(BuildContext context) {
             context, "Player X won The game!", 'Winner', DialogType.success)
         .show();
     cnt = 0;
+    gameOver = true;
   } else if ((cells[0] == cells[1] &&
           cells[1] == cells[2] &&
           cells[2] == 'O') ||
@@ -30,9 +31,11 @@ xOrOWin(BuildContext context) {
             context, "Player O won The game!", "winner", DialogType.success)
         .show();
     cnt = 0;
+    gameOver = true;
   } else if (cnt == 9) {
     awesomeDialogModel(context, "Players Drawer", "Drawer", DialogType.warning)
         .show();
     cnt = 0;
+    gameOver = true;
   }
 }
