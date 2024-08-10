@@ -12,8 +12,8 @@ xOrOWin(BuildContext context) {
       (cells[2] == cells[5] && cells[5] == cells[8] && cells[8] == 'X') ||
       (cells[0] == cells[4] && cells[4] == cells[8] && cells[8] == 'X') ||
       (cells[2] == cells[4] && cells[4] == cells[6] && cells[6] == 'X')) {
-    awesomeDialogModel(
-            context, "Player X won The game!", 'Winner', DialogType.success)
+    awesomeDialogModel(context, "Player X won The game!", 'Winner',
+            DialogType.success, "X")
         .show();
     cnt = 0;
     gameOver = true;
@@ -27,13 +27,14 @@ xOrOWin(BuildContext context) {
       (cells[2] == cells[5] && cells[5] == cells[8] && cells[8] == 'O') ||
       (cells[0] == cells[4] && cells[4] == cells[8] && cells[8] == 'O') ||
       (cells[2] == cells[4] && cells[4] == cells[6] && cells[6] == 'O')) {
-    awesomeDialogModel(
-            context, "Player O won The game!", "winner", DialogType.success)
+    awesomeDialogModel(context, "Player O won The game!", "winner",
+            DialogType.success, "O")
         .show();
     cnt = 0;
     gameOver = true;
   } else if (cnt == 9) {
-    awesomeDialogModel(context, "Players Drawer", "Drawer", DialogType.warning)
+    awesomeDialogModel(
+            context, "Players Drawer", "Drawer", DialogType.warning, "Draw")
         .show();
     cnt = 0;
     gameOver = true;

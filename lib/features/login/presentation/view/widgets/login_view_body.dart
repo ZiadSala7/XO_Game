@@ -22,18 +22,10 @@ class LoginViewBody extends StatelessWidget {
         ),
         CustomButton(
           txt: 'Start Game',
-          color: Colors.amber,
+          color: Colors.amberAccent,
           onPressed: () {
             GoRouter.of(context).push(AppRouter.homeView);
           },
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        CustomButton(
-          txt: "About us",
-          color: Colors.amber,
-          onPressed: () {},
         ),
       ],
     );

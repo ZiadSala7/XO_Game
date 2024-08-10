@@ -10,14 +10,26 @@ AwesomeDialog awesomeDialogModel(
   String desc,
   String title,
   DialogType dType,
+  String isO,
 ) {
   return AwesomeDialog(
     context: context,
     dialogType: dType,
     animType: AnimType.topSlide,
     title: title,
-    desc: desc,
-    descTextStyle: Styles.textStyle20Bold.copyWith(color: Colors.black),
+    titleTextStyle: Styles.textStyle25Bold.copyWith(
+      fontFamily: "fontFamily",
+      color: Colors.black,
+    ),
+    desc: title == "Drawer" ? null : desc,
+    descTextStyle: Styles.textStyle25Bold.copyWith(
+      fontFamily: "fontFamily",
+      color: isO == 'O'
+          ? Colors.green
+          : isO == "X"
+              ? Colors.red
+              : Colors.black,
+    ),
     btnOkOnPress: () {
       cnt = 0;
       gameOver = false;
