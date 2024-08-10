@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:xo_game/core/utils/app_animations.dart';
 import 'package:xo_game/core/utils/app_images.dart';
 import 'package:xo_game/core/utils/app_router.dart';
+import 'package:xo_game/core/utils/styles.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -31,10 +32,21 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         CustomFadeInDown(
           duration: 1,
-          child: Image.asset(
-            AppImages.splash,
-            height: 200,
-            width: 100,
+          child: Column(
+            children: [
+              Image.asset(
+                AppImages.splash,
+                height: 200,
+                width: 130,
+              ),
+              Text(
+                'Tic-Tac-Toe',
+                textAlign: TextAlign.center,
+                style: Styles.textStyle25Bold.copyWith(
+                  fontFamily: "fontFamily",
+                ),
+              ),
+            ],
           ),
         ),
       ],
